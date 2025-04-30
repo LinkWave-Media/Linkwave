@@ -17,51 +17,14 @@
 
     iframe {
       position: absolute;
-      top: 40px; /* leave space for header */
+      top: 0;
       left: 0;
       width: 100vw;
-      height: calc(100vh - 40px); /* adjust for header height */
+      height: 100vh;
       border: none;
       z-index: 0;
     }
 
-    .header-text {
-       box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 16px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 40px;
-      background: white;
-      color: black;
-      font-size: 16px;
-      text-align: left;
-      line-height: 40px;
-      z-index: 2;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      flex-wrap: wrap; /* Allow text to wrap */
-    }
-    
-    .color-circle {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-    
-    .color-circle.tentative-color{
-       background-color: #FAE1CF;
-    }
-    
-     .color-circle.confirmed-color{
-       background-color: #D7F4D4;
-    }
-    
     .floating-box {
       position: absolute;
       bottom: 0px;
@@ -72,48 +35,19 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       z-index: 2;
     }
-
-    .footer {
-      text-align: center; 
-      padding-bottom: 5px; 
-      font-size: 10px; 
-      color: #aaaaaa;
-      line-height: 25px;
-    }
   </style>
 </head>
 <body>
 
-<div class="header-text">
-  <div>
-    Sigma Event Productions - Calendar
-  </div>
-  <div style="display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap;">
-    <span style="display: flex; align-items: center; margin-right: 12px;">
-      <span class="color-circle tentative-color"></span>
-      <span style="font-size: 14px; white-space: nowrap; margin-left: 4px;">Tentative</span>
-    </span>
-    <span style="display: flex; align-items: center;">
-      <span class="color-circle confirmed-color"></span>
-      <span style="font-size: 14px; white-space: nowrap; margin-left: 4px;">Confirmed</span>
-    </span>
-  </div>
-</div>
+  <iframe 
+    class="airtable-embed" 
+    src="https://airtable.com/embed/apphyz3BsBOEJr5AU/shrIfyagDZd6G46xF" 
+    title="Airtable Embedded View" 
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
 
-
-<iframe 
-  class="airtable-embed" 
-  src="https://airtable.com/embed/apphyz3BsBOEJr5AU/shrwDamlFz5dpnXRr" 
-  title="Airtable Embedded View" 
-  frameborder="0" 
-  allowfullscreen>
-</iframe>
-
-<div class="floating-box">
-  <footer class="footer">
-    &copy; 2025 LinkWave Media. All rights reserved.
-  </footer>
-</div>
+  <div class="floating-box"></div>
 
 </body>
 </html>
