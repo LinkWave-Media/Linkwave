@@ -2,50 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
-    }
-
-    body {
       font-family: sans-serif;
       background: #f5f5f5;
     }
 
-    iframe {
+    .iframe-wrapper {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      bottom: 25px; /* leaves space for floating box */
+    }
+
+    .iframe-wrapper iframe {
+      width: 100%;
+      height: 100%;
       border: none;
-      z-index: 0;
     }
 
     .floating-box {
       position: absolute;
-      bottom: 0px;
-      left: 0px;
-      width: 100vw;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       height: 25px;
       background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .floating-box {
+        height: 40px;
+      }
+
+      .iframe-wrapper {
+        bottom: 40px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <iframe 
-    class="airtable-embed" 
-    src="https://airtable.com/embed/apphyz3BsBOEJr5AU/shrIfyagDZd6G46xF" 
-    title="Airtable Embedded View" 
-    frameborder="0" 
-    allowfullscreen>
-  </iframe>
+  <div class="iframe-wrapper">
+    <iframe 
+      class="airtable-embed" 
+      src="https://airtable.com/embed/apphyz3BsBOEJr5AU/shrwDamlFz5dpnXRr" 
+      title="Airtable Embedded View" 
+      allowfullscreen>
+    </iframe>
+  </div>
 
   <div class="floating-box"></div>
 
